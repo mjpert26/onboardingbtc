@@ -349,3 +349,98 @@ a {
   padding: 24px;
   text-align: center;
 }
+
+/* ---- auth ---- */
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.user-email {
+  color: #9fb3c8;
+  font-size: 13px;
+}
+.signout-btn {
+  background: transparent;
+  border: 1px solid #34506e;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.signout-btn:hover {
+  background: var(--navy-2);
+}
+
+.signin-wrap {
+  min-height: calc(100vh - 74px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.signin-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(10, 37, 64, 0.08);
+}
+.signin-card h1 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--navy);
+}
+.signin-sub {
+  color: var(--muted);
+  margin: 4px 0 24px 0;
+  font-size: 14px;
+}
+.signin-error {
+  background: var(--red-bg);
+  color: var(--red);
+  border: 1px solid #f2cfca;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.ms-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ms-btn:hover {
+  background: var(--navy-2);
+}
+.ms-logo {
+  display: inline-grid;
+  grid-template-columns: 9px 9px;
+  grid-template-rows: 9px 9px;
+  gap: 2px;
+}
+.ms-logo span {
+  display: block;
+  width: 9px;
+  height: 9px;
+}
+.signin-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 22px 0 0 0;
+}
