@@ -351,6 +351,25 @@ a {
 }
 
 /* ---- auth ---- */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.wf-link {
+  color: #fff;
+  background: var(--navy-2);
+  border: 1px solid #34506e;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.wf-link:hover {
+  background: #1c3b5e;
+}
 .user-box {
   display: flex;
   align-items: center;

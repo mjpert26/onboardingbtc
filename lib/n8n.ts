@@ -11,6 +11,11 @@ export function isMockMode(): boolean {
   return USE_MOCK;
 }
 
+/** URL of the New Hire Onboarding workflow in the n8n editor. */
+export function workflowUrl(): string {
+  return process.env.N8N_WORKFLOW_URL || `${BASE_URL}/workflow/${WORKFLOW_ID}`;
+}
+
 async function n8nFetch(path: string): Promise<any> {
   const res = await fetch(`${BASE_URL}/api/v1${path}`, {
     headers: { "X-N8N-API-KEY": API_KEY, Accept: "application/json" },

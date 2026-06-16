@@ -20,6 +20,24 @@ export const ALLOWED_EMAILS: string[] = (
   .map((e) => e.trim().toLowerCase())
   .filter(Boolean);
 
+// Admins additionally see a link to the n8n workflow itself. Override with the
+// ADMIN_EMAILS env var (comma-separated).
+const DEFAULT_ADMINS = [
+  "mike.perticone@bigthinkcapital.com",
+  "brian@bigthinkcapital.com",
+  "jared.faux@bigthinkcapital.com",
+];
+
+export const ADMIN_EMAILS: string[] = (
+  process.env.ADMIN_EMAILS ? process.env.ADMIN_EMAILS.split(",") : DEFAULT_ADMINS
+)
+  .map((e) => e.trim().toLowerCase())
+  .filter(Boolean);
+
+export function isAdmin(email?: string | null): boolean {
+  return !!email && ADMIN_EMAILS.includes(email.toLowerCase());
+}
+
 function emailFrom(user: any, profile: any): string {
   return (
     user?.email ||
